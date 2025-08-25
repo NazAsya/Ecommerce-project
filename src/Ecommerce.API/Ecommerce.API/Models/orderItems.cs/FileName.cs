@@ -1,20 +1,21 @@
 ﻿using Ecommerce.API.Models;
+using Ecommerce.API.Models.Common;
 
 
 namespace Ecommerce.API.Models
 {
-    public class OrderItem
+    public class OrderItem: BaseEntity
     {
-    public int Id { get; set; }               
+    public Guid Id { get; set; }               
      // Sipariş kalemi ID
-     public int OrderId { get; set; }
+     public Guid OrderId { get; set; }
      // Hangi siparişe ait
       public int Quantity { get; set; }
      // Kaç adet ürün
-     public int ProductId { get; set; }        
-     public Product Product { get; set; }   
+     public Guid ProductId { get; set; }        
+     public Product Products { get; set; }   
         
-     public Order Order { get; set; }
+     public Order Orders { get; set; }
      
      
     }

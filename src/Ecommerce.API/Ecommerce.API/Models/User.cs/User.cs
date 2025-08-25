@@ -1,12 +1,13 @@
 ﻿using Ecommerce.API.Models;
+using Ecommerce.API.Models.Common;
 
 namespace Ecommerce.API.Models
 {
-    public class User
+    public class User: BaseEntity
     //Class, nesne yönelimli programlamada bir varlık için şablondur. User sınıfı da kullanıcı bilgisini tutacak özelliklere sahiptir.
     {
-        public int Id { get; set; }
-        public string Username { get; set; }
+        public Guid Id { get; set; }
+        public string UserName { get; set; }
         public string Email { get; set; }
         public UserRole Role { get; set; }
         //Kullanıcının sistem içindeki rolü, örneğin admin veya müşteri. Bu enum tipinde.

@@ -1,10 +1,11 @@
 ﻿using Ecommerce.API.Models;
+using Ecommerce.API.Models.Common;
 
 namespace Ecommerce.API.Models
 {
-    public class Category
+    public class Category: BaseEntity
     {
-        public int Id { get; set; }                    
+        public Guid Id { get; set; }                    
         //Kategori ID
         public string Name { get; set; }               
         //Kategori adı
